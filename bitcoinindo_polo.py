@@ -1,7 +1,7 @@
 import urllib2
 from bs4 import BeautifulSoup
 
-alamat = "https://coinmarketcap.com/exchanges/bitcoin-indonesia/"
+alamat = "https://coinmarketcap.com/exchanges/indodax"
 page = urllib2.urlopen(alamat)
 soup = BeautifulSoup(page, "html.parser")
 a_tabel = soup.find_all('table')[0].find('a', string="BTC/IDR").parent.parent
